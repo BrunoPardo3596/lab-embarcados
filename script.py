@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import uinput
 import time
 
-buttonUp = 5
+buttonUp = 12
 buttonDown = 6
 buttonRight = 13
 buttonLeft = 19
