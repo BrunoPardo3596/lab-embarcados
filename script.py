@@ -71,5 +71,5 @@ if __name__ == '__main__':
     loop()
 
   except KeyboardInterrupt:
-    print 'keyboard interrupt detected' 
+    print('keyboard interrupt detected')
     endprogram()
