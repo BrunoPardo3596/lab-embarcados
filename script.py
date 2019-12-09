@@ -14,7 +14,7 @@ buttonY = 16
 
 def setup():
   GPIO.setmode(GPIO.BOARD)
-  GPIO.setup(buttonUp, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+  GPIO.setup(buttonUp, GPIO.IN)
   # GPIO.setup(buttonDown, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonLeft, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonRight, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
