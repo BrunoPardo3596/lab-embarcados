@@ -13,7 +13,9 @@ buttonY = 16
 
 
 def setup():
-  GPIO.setmode(GPIO.BCM)
+  print('Configurando modo Board')
+  GPIO.setmode(GPIO.BOARD)
+  print('Configurando Pinagem')
   GPIO.setup(buttonUp, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonDown, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonLeft, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -24,6 +26,7 @@ def setup():
   # GPIO.setup(buttonY, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 def loop():
+  print('entrando no loop')
   while True:
     buttonUpState = GPIO.input(buttonUp)
     # buttonDownState = GPIO.input(buttonDown)
