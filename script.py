@@ -16,7 +16,7 @@ def setup():
   print('Configurando modo Board')
   GPIO.setmode(GPIO.BOARD)
   print('Configurando Pinagem')
-  GPIO.setup(buttonUp, GPIO.IN)
+  GPIO.setup(buttonUp, GPIO.IN, pull_up_down=GPIO.PUD_UP)
   # GPIO.setup(buttonDown, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonLeft, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonRight, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -37,7 +37,7 @@ def loop():
     # buttonXState = GPIO.input(buttonX)
     # buttonYState = GPIO.input(buttonY)
 
-    if gpio.input(buttonUp) == gpio.HIGH:
+    if gpio.input(buttonUp) == gpio.LOW:
       print('yoooooooo')
       with uinput.Device([uinput.KEY_E, uinput.KEY_H, uinput.KEY_L, uinput.KEY_O]) as device:
         device.emit_click(uinput.KEY_E)
