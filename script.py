@@ -14,7 +14,7 @@ buttonY = 16
 
 def setup():
   GPIO.setmode(GPIO.BOARD)
-  GPIO.setup(buttonUp, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+  GPIO.setup(buttonUp, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonDown, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonLeft, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
   # GPIO.setup(buttonRight, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
@@ -35,7 +35,7 @@ def loop():
     # buttonYState = GPIO.input(buttonY)
 
     if  buttonUpState == False:
-      print("heuheuuheueh")
+      print('heuheuuheueh')
       with uinput.Device([uinput.KEY_A]) as device:
         device.emit_click(uinput.KEY_A)
     # if  buttonDownState == True:
