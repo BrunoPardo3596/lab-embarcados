@@ -1,4 +1,4 @@
-import rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import uinput
 import time
 
