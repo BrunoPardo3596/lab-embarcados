@@ -37,7 +37,7 @@ def loop():
     # buttonXState = GPIO.input(buttonX)
     # buttonYState = GPIO.input(buttonY)
 
-    if gpio.input(buttonUp) == gpio.LOW:
+    if GPIO.input(buttonUp) == GPIO.LOW:
       print('yoooooooo')
       with uinput.Device([uinput.KEY_E, uinput.KEY_H, uinput.KEY_L, uinput.KEY_O]) as device:
         device.emit_click(uinput.KEY_E)
